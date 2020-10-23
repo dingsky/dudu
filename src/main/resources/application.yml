@@ -5,3 +5,5 @@ spring:
     password: Fbi@123456
 
 mybatis.mapperLocations: classpath:mapper/*.xml
+
+data.mongodb.uri: mongodb://marketcenter:marketcenter@10.250.80.35:27017/marketcenter
