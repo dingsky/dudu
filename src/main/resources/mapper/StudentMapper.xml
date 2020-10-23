@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dudu.dao.StudentMapper">
+    <select id="selectAll" resultType="com.dudu.model.Student">
+        select * from tbl_student
+    </select>
+    <insert id="insert" parameterType="com.dudu.model.Student">
+        insert into tbl_student(studentNo, studentName) values(#{studentNo}, #{studentName})
+    </insert>
+    <select id="selectOne"  resultType="com.dudu.model.Student">
+        select * from tbl_student where studentNo = #{studentNo}
+    </select>
+    <update id="updateOne" parameterType="com.dudu.model.Student">
+       update tbl_student set studentNo = #{studentNo},studentName = #{studentName}  where studentNo = #{studentNo}
+    </update>
+    <delete id="deleteOne">
+       delete from tbl_student where studentNo = #{studentNo}
+    </delete>
+</mapper>

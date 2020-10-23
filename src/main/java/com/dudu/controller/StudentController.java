@@ -2,7 +2,6 @@ package com.dudu.controller;
 
 import com.dudu.model.Student;
 import com.dudu.service.StudentSevice;
-import org.apache.ibatis.annotations.Delete;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
