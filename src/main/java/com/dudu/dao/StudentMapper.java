@@ -2,7 +2,6 @@ package com.dudu.dao;
 
 import com.dudu.model.Student;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Mapper
