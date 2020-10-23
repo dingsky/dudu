@@ -2,6 +2,8 @@ package com.dudu.controller;
 
 import com.dudu.model.Student;
 import com.dudu.service.StudentSevice;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -14,8 +16,11 @@ public class StudentController {
     private StudentSevice studentSevice;
 
     @RequestMapping(value = "/queryList", method = RequestMethod.GET)
-    public List<Student>selectAllStudent() {
-        return this.studentSevice.selectAll();
+    public PageInfo<Student>selectAllStudent(@RequestParam("page") Integer page,@RequestParam("size") Integer size) {
+        PageHelper.startPage(page,size);
+        List<Student> list = this.studentSevice.selectAll();
+        PageInfo<Student> pageInfo = new PageInfo<>(list);
+        return pageInfo;
     }
 
     @PostMapping("/create")
