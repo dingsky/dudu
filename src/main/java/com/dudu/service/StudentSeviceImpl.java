@@ -1,6 +1,6 @@
 package com.dudu.service;
 
-import com.dudu.dao.StudentMapper;
+import com.dudu.dao.msyql.StudentMapper;
 import com.dudu.model.Student;
 import org.springframework.stereotype.Service;
 

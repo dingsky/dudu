@@ -1,4 +1,4 @@
-package com.dudu.dao;
+package com.dudu.dao.msyql;
 
 import com.dudu.model.Student;
 import org.apache.ibatis.annotations.*;

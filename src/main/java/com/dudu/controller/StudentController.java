@@ -18,7 +18,12 @@ public class StudentController {
     @RequestMapping(value = "/queryList", method = RequestMethod.GET)
     public PageInfo<Student>selectAllStudent(@RequestParam("page") Integer page,@RequestParam("size") Integer size) {
         PageHelper.startPage(page,size);
-        List<Student> list = this.studentSevice.selectAll();
+        List<Student> list;
+        try {
+            list = this.studentSevice.selectAll();
+        }catch (Exception e){
+            list = null;
+        }
         PageInfo<Student> pageInfo = new PageInfo<>(list);
         return pageInfo;
     }
