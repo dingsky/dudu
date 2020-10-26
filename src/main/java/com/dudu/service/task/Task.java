@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @EnableScheduling
 @EnableAsync
 public class Task {
-    public static Logger log = LoggerFactory.getLogger(RedisUtil.class);
+    public static Logger log = LoggerFactory.getLogger(Task.class);
 
     @Async
     @Scheduled(cron = "1 * * * * *")

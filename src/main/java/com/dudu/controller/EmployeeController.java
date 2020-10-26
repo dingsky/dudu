@@ -1,5 +1,6 @@
 package com.dudu.controller;
 
+import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.dudu.model.Employee;
 import com.dudu.service.EmployeeSevice;
 import com.github.pagehelper.PageHelper;
@@ -14,7 +15,6 @@ import java.util.List;
 public class EmployeeController {
     @Resource
     private EmployeeSevice employeeSevice;
-
     @PostMapping("/create")
     public String create(@RequestBody Employee employee) {
         employeeSevice.create(employee);
