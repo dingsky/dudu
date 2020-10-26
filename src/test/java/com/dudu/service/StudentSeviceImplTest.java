@@ -1,6 +1,6 @@
 package com.dudu.service;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;

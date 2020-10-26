@@ -1,7 +1,8 @@
 package com.dudu.dao.mongodb;
 
+import com.dudu.dao.redis.RedisUtil;
 import com.dudu.model.Employee;
-import com.sun.org.apache.bcel.internal.generic.MONITORENTER;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
